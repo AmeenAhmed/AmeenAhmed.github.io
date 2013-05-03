@@ -92,5 +92,17 @@ li {
 
 .float-right {
 	float: right;
-	margin-right: 140px;
+	margin-right: 20px;
+}
+
+iframe {
+	width: 80px !important;
+}
+
+.line iframe {
+	vertical-align: middle;
+}
+
+#___plusone_0 {
+	width: 80px !important;
 }
