@@ -1,0 +1,132 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+}
+
+.github {
+	width: 960px;
+	margin: 40px auto;
+}
+.head {
+	background: #e6f1f6;
+	border: 1px solid #b7c7cf;
+	border-bottom-color: #d8e6ec;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+}
+.message {
+	padding: 8px 8px 8px;
+	background: #e6f1f6;
+	
+	border-bottom-color: #d8e6ec;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+	font-size: 13px;
+	color: #4e575b;
+}
+.name {
+	color: #444;
+}
+.commit {
+	font-size: 13px;
+	color: #999;
+	padding: 4px 2px;
+	
+	
+	background: #fff;
+	border-top: 1px solid #d8e6ec;
+}
+.commit-message {
+	margin-top: -4px;
+	display: inline-table;
+}
+.nav {
+	background-color: #F4F4F4;
+	color: #333;
+}
+a, a:visited, a:link {
+	color: #4183c4;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.nav-list {
+	list-style: none;
+}
+.links {
+	width: 100px;
+	display: inline-block;
+}
+.nav-list li {
+	padding: 8px;
+	
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+.msg {
+	font-size: 13px;
+	margin-left: 200px;
+}
+
+.header {
+	color: #4183c4;
+	padding: 4px;
+	font-size:18px;
+}
+.header-name {
+	padding: 0 2px;
+}
+
+.header-blog {
+	font-weight: bold;
+	padding: 0 2px;
+}
+
+.shadow {
+	box-shadow: 0 0 2px 1px #cdcdcd;
+}
+.blogs {
+	margin-top: 40px;
+}
+.blog-header {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+	padding: 10px 10px;
+	color: #555;
+	text-shadow: 0 1px 0 #fff;
+	display: block;
+	border: 1px solid #CACACA;
+	border-bottom: 0 none;
+	background-color: #eaeaea;
+	background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+	background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+	background-image: linear-gradient(#fafafa, #eaeaea);
+	background-repeat: repeat-x;
+}
+.blog-content {
+	font-size: 14px;
+	padding: 12px;
+	color: #333;
+}
+
+.blog-content p {
+	line-height: 24px;
+	margin: 18px;
+	text-indent: 40px;
+}
+.blog-header-info {
+	font-size: 13px;
+	font-weight: normal;
+	float: right;
+}
+

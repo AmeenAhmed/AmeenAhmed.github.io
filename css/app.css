@@ -12,6 +12,10 @@ a, a:hover, a:link, a:visited {
 	text-decoration: underline;
 }
 
+a.menu {
+	text-decoration: none;
+}
+
 .sidebar {
 	position: absolute;
 	width: 200px;
