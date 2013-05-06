@@ -85,6 +85,11 @@ a:hover {
 .header-name {
 	padding: 0 2px;
 }
+.header-commit {
+	font-weight: bold;
+	padding: 0 2px;
+	font-size: 16px;
+}
 
 .header-blog {
 	font-weight: bold;
@@ -95,6 +100,9 @@ a:hover {
 	box-shadow: 0 0 2px 1px #cdcdcd;
 }
 .blogs {
+	margin-top: 40px;
+}
+.blog {
 	margin-top: 40px;
 }
 .blog-header {
@@ -129,4 +137,10 @@ a:hover {
 	font-weight: normal;
 	float: right;
 }
+.spinner {
+	text-align: center;
+}
 
+.right-float {
+	float: right;
+}
