@@ -51,6 +51,7 @@
 
 		$(document).scroll(function() {
 			if(scrollY >= ($(document).height() - $(window).height()) && !blogEnd) {
+				blogEnd = true;
 				showSpinner();
 				$.ajax({
 					type:'GET',
@@ -61,6 +62,7 @@
 							addBlog(data);
 							blogCount += 1;	
 							removeSpinner();
+							blogEnd = false;
 						} else {
 							blogEnd = true;
 							removeSpinner();
