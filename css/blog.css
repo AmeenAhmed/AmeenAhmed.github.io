@@ -9,7 +9,7 @@ body {
 
 .github {
 	width: 960px;
-	margin: 40px auto;
+	margin: 80px auto;
 }
 .head {
 	background: #e6f1f6;
@@ -64,6 +64,7 @@ a:hover {
 .links {
 	width: 100px;
 	display: inline-block;
+	font-size: 13px;
 }
 .nav-list li {
 	padding: 8px;
@@ -75,6 +76,12 @@ a:hover {
 .msg {
 	font-size: 13px;
 	margin-left: 200px;
+}
+
+.disabled-link {
+	width: 104px;
+	display: inline-block;
+	font-size: 13px;
 }
 
 .header {
@@ -144,4 +151,16 @@ a:hover {
 
 .right-float {
 	float: right;
+}
+
+.float-right {
+	text-align: right;
+	margin: 20px;
+}
+
+iframe {
+	width: 80px !important;
+}
+#___plusone_0 {
+	width: 80px !important;
 }

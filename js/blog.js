@@ -2,6 +2,40 @@
 
 	var blogCount = 1;
 	var blogEnd = false;
+	var lastAuthoredTime = new Date('30 Apr 2013');
+	var hours = Math.floor(((new Date() - lastAuthoredTime) / (1000 * 60 * 60))); 
+	var days = Math.floor(((new Date() - lastAuthoredTime) / (1000 * 60 * 60 * 24)));
+	var message = 'authored ';
+	console.log(hours);
+	console.log(days);
+
+	
+	if(days < 1) {
+		message += hours + ' hours ago';
+	} else if(days === 1) {
+		message += 'a day ago';
+	} else if(days < 30) {
+		message += days + ' days ago';
+	} else if(days < 365) {
+		var month = Math.floor(days / 30);
+		if(month === 1) {
+			message += 'a month ago'	
+		} else {
+			message +=  month + ' months ago';	
+		}
+		
+	} else {
+		var year = Math.floor(days / 365);
+		if(year === 1) {
+			message += 'a year ago';
+		} else {
+			message += year + ' year ago';
+		}
+	}
+
+	console.log(message);
+
+	
 
 	function addBlog(data) {
 		$blogs = $('.blogs');
@@ -37,6 +71,7 @@
 
 
 	$(document).ready(function() {
+		$('#time').html(message);
 		showSpinner();
 		$.ajax({
 			type:'GET',
