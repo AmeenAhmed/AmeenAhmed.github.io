@@ -3,110 +3,133 @@
 	padding: 0;
 }
 
-body {
+
+header {
+	background: #2c3e50;
+	width: 100%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 24pt;
+	color: #fff;
+	text-align: center;
+	height: 400px;
+	top:0;
+	position: absolute;
+}
+
+footer {
+	background: #ecf0f1;
+	border-top: 1px solid #aaa;
+	width: 100%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 24pt;
+	color: #fff;
+	text-align: center;
+	height: 200px;
+	top:0;
+	position: absolute;
+	top: 700px;
+}
+
+.name {
+	text-align: left;
+	padding: 20px;
+	font-size: 36pt;
+	box-shadow: 0 2px 8px #000;
+	display: inline-block;
+	background: #3498db;
+}
+
+.quote {
+	margin-top: 100px;
+}
+
+.toolbar {
+	margin-top: 20px;
+	font-size: 12pt;
+}
+.toolbar span {
+	display: block;
+}
+
+.toolbar div {
+	display: inline-block;
+	margin: 10px 40px;
+	cursor: pointer;
+	color: #95a5a6;
+}
+
+.toolbar div.f {
+	display: inline-block;
+	margin: 10px 20px;
+	cursor: pointer;
 	
 }
 
-a, a:hover, a:link, a:visited {
-	color: inherit;
-	text-decoration: underline;
+.tool {
+	font-family: "Aminius";
+	font-size: 28pt;
+	text-shadow: 0 0 2px #000;
 }
 
-a.menu {
+.tool-f{
+	font-family: "Aminius";
+	font-size: 28pt;
+	color: #2c3e50;
+}
+
+.toolbar div.f:hover {
+	
+}
+.fb .tool-f:hover {
+	color: #3b5999;
+}
+.tw .tool-f:hover {
+	color: #3498db;
+}
+.li .tool-f:hover {
+	color: #0181B2;
+}
+.gm .tool-f:hover {
+	color: #c0392b;
+}
+.gh .tool-f:hover {
+	color: #222;
+}
+.sk .tool-f:hover {
+	color: #12A5F4;
+}
+.mp .tool-f:hover {
+	color: #e44;
+}
+
+.toolbar div.h:hover {
+	color: #ecf0f1;
+}
+
+.content {
+	background: #ecf0f1;
+	position: absolute;
+	top: 400px;
+	width: 100%;
+	height: 300px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20pt;
+}
+
+.desc {
+	margin: 40px;
+}
+
+
+@font-face {
+	font-family: Aminius;
+	src: url('../fonts/aminius.ttf');
+}
+
+a {
 	text-decoration: none;
 }
 
-.sidebar {
-	position: absolute;
-	width: 200px;
-	height: 100%;
-
-	background-color: #DEDEDE;
-}
-.header {
-	position: absolute;
-	width: 85%;
-	left: 200px;
-	
-	min-height: 40px;
-	background-color: #000;
-}
-
-.container {
-	position: absolute;
-	width: 85%;
-	top: 40px;
-	height: 100%;
-	left: 200px;
-	background-color: #272822;
-	padding: 4px 12px;
-}
-
-.file {
-	font: 10pt Arial;
-	color: #242424;
-}
-
-.file.selected {
-	color: #FFF;
-	background-color: #898989;
-}
-
-li {
-	padding: 4px 16px;
-	padding-left: 16px;
-	list-style: none;
-	cursor: pointer;
-}
-
-.code {
-	font-family: Consolas, Inconsolata, Monaco, monospace;
-	font-size: 14pt;
-	color: #fff;
-}
-
-.heading {
-	color: rgb(249, 38, 114);
-}
 
 
-.keyword {
-	color: rgb(102, 217, 239);
-}
 
-.variable {
-	color: rgb(127, 226, 46);
-}
-
-.string {
-	color: rgb(230, 219, 116);
-}
-
-.comment {
-	color: rgb(117, 113, 94);
-}
-
-.indent1 {
-	margin-left: 2em;
-}
-
-.line {
-	margin: 1em 0;
-}
-
-.float-right {
-	float: right;
-	margin-right: 20px;
-}
-
-iframe {
-	width: 80px !important;
-}
-
-.line iframe {
-	vertical-align: middle;
-}
-
-#___plusone_0 {
-	width: 80px !important;
-}
