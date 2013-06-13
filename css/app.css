@@ -37,10 +37,12 @@ footer {
 	box-shadow: 0 2px 8px #000;
 	display: inline-block;
 	background: #3498db;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
 .quote {
-	margin-top: 100px;
+	margin-top: 80px;
 }
 
 .toolbar {
@@ -114,10 +116,13 @@ footer {
 	height: 300px;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 20pt;
+	text-align: center;
 }
 
 .desc {
-	margin: 40px;
+	margin: 80px;
+	display: inline-block;
+	width: 960px;
 }
 
 
