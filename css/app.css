@@ -177,6 +177,12 @@ p {
 	text-align: left;
 }
 
+.blogs a {
+	cursor: pointer;
+	color: #3498db;
+	text-decoration: underline;
+}
+
 
 
 
