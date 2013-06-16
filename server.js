@@ -17,14 +17,25 @@ http.createServer(function(req, res) {
 			res.setHeader('Content-Type', 'image/gif');
 			res.end(fs.readFileSync('.' + req.url));
 			return;	
+		} else if(req.url.match('.ttf')) {
+			res.setHeader('Content-Type', 'font/opentype');
+			res.end(fs.readFileSync('.' + req.url));
+			return;	
 		}
 		res.statusCode = 200;
 		if(req.url === '/') {
 			req.url = '/index.html';
 		}
+		if(!req.url.match('.')) {
+			req.url += '.html';	
+			res.setHeader('Content-Type', 'text/html');
+		}
+		
+		
 		console.log(req.url);
 		res.end(fs.readFileSync('.' + req.url, 'utf-8'));
 	} else {
+
 		console.log(req.url + ' not found!');
 		res.statusCode = 404;
 		res.end();

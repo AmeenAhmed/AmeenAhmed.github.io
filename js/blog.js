@@ -39,6 +39,7 @@
 
 	function addBlog(data) {
 		$blogs = $('.blogs');
+		$blogs.html("");
 		$blog = $('<div></div>').addClass('shadow').addClass('blog');
 		$header = $('<div></div>').addClass('blog-header');
 		$header_info = $('<span></span>').addClass('blog-header-info');
@@ -52,6 +53,27 @@
 		$blog.append($header);
 
 		$blog_content.html(data.content);
+
+		$blog.append($blog_content);
+
+		$blogs.append($blog);
+	}
+
+	function addBlogSummary(data, num) {
+		$blogs = $('.blogs');
+		$blog = $('<div></div>').addClass('blog-summary');
+		$header = $('<div></div>').addClass('blog-header');
+		$header_info = $('<span></span>').addClass('blog-header-info');
+		$blog_content = $('<span></span>').addClass('blog-content');
+
+
+		$header.html(data.title).append($('<a href="#/' + num + '"><span class="read">Read More</span>'));
+		$header_info.html(data.on);
+		$header.append($header_info);
+
+		$blog.append($header);
+
+		$blog_content.html(data.summary);
 
 		$blog.append($blog_content);
 
@@ -72,46 +94,89 @@
 
 	$(document).ready(function() {
 		$('#time').html(message);
-		showSpinner();
-		$.ajax({
-			type:'GET',
-			url: '/blogs/' + blogCount + '.json',
-			success: function(data) {
-				addBlog(data);
-				blogCount += 1;
-				removeSpinner();
-			}
-		});
-
-
-		$(document).scroll(function() {
-			if(scrollY >= ($(document).height() - $(window).height()) && !blogEnd) {
-				blogEnd = true;
-				showSpinner();
-				$.ajax({
-					type:'GET',
-					url: '/blogs/' + blogCount + '.json',
-					success: function(data) {
-						if(data) {
-							console.log(data);
-							addBlog(data);
-							blogCount += 1;	
-							removeSpinner();
-							blogEnd = false;
-						} else {
-							blogEnd = true;
-							removeSpinner();
-						}
-						
-					},
-					error: function() {
-						
-						blogEnd = true;
-						removeSpinner();
+		var hash = location.hash;
+		
+		if(hash) {
+			var blog = +hash.replace('#/', '');
+			$.ajax({
+				type:'GET',
+				url: '/blogs/' + blog + '.json',
+				success: function(data) {
+					addBlog(data);
+				}
+			});
+		} else {
+			$.ajax({
+				type:'GET',
+				url: '/blogs/meta.json',
+				success: function(data) {
+					var numBlogs = data.numBlogs;
+					var i = numBlogs;
+					function loadBlog() {
+						$.ajax({
+							type:'GET',
+							url: '/blogs/' + i + '.json',
+							success: function(data) {
+								addBlogSummary(data, i);
+								if(i) {
+									i--;	
+									loadBlog();
+								} 
+								
+							}
+						});	
 					}
-				});
-			}
+					loadBlog();	
+				}
+			});
+		}
+			
+		
+		$(document).on('click','.read', function() {
+			var hash = $(this).parent().attr('href');
+			
+			var blog = +hash.replace('#/', '');
+			
+
+			$.ajax({
+				type:'GET',
+				url: '/blogs/' + blog + '.json',
+				success: function(data) {
+					addBlog(data);
+					$(window).scrollTop(0);
+				}
+			});
 		});
+
+
+		// $(document).scroll(function() {
+		// 	if(scrollY >= ($(document).height() - $(window).height()) && !blogEnd) {
+		// 		blogEnd = true;
+		// 		showSpinner();
+		// 		$.ajax({
+		// 			type:'GET',
+		// 			url: '/blogs/' + blogCount + '.json',
+		// 			success: function(data) {
+		// 				if(data) {
+		// 					console.log(data);
+		// 					addBlogSummary(data);
+		// 					blogCount += 1;	
+		// 					removeSpinner();
+		// 					blogEnd = false;
+		// 				} else {
+		// 					blogEnd = true;
+		// 					removeSpinner();
+		// 				}
+						
+		// 			},
+		// 			error: function() {
+						
+		// 				blogEnd = true;
+		// 				removeSpinner();
+		// 			}
+		// 		});
+		// 	}
+		// });
 	});
 
 })();
