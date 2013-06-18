@@ -4,7 +4,7 @@
 }
 
 body {
-	background: #7f8c8d;
+	background: #2c3e50;
 }
 
 
@@ -37,7 +37,6 @@ footer.m {
 
 footer.b {
 	background: #2c3e50;
-	border-top: 1px solid #aaa;
 	width: 100%;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 24pt;
@@ -45,7 +44,7 @@ footer.b {
 	text-align: center;
 	height: 200px;
 	
-	margin-top: -40px;
+	margin-top: 80px;
 	top: 700px;
 
 }
@@ -175,8 +174,8 @@ a {
 	z-index: 1;
 	margin-top: 300px;
 	text-align: center;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px; 
+	border-radius: 8px;
+	
 	padding: 40px;
 
 }
@@ -249,8 +248,7 @@ span.read {
 	z-index: 1;
 	margin-top: 300px;
 	text-align: center;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px; 
+	border-radius: 8px;
 	padding: 40px;
 
 }
