@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Avanor</title>
+        
+        <!-- <script type="text/javascript" src="src/avanor.js"></script>
+        <script type="text/javascript" src="src/game.js"></script>
+        <script type="text/javascript" src="src/map.js"></script>
+        <script type="text/javascript" src="src/camera.js"></script>
+        <script type="text/javascript" src="src/character.js"></script>
+        <script type="text/javascript" src="src/building.js"></script>
+        <script type="text/javascript" src="src/utils.js"></script>
+        <script type="text/javascript" src="src/asset_manager.js"></script>
+        <script type="text/javascript" src="src/building_constants.js"></script>
+        <script type="text/javascript" src="src/character_constants.js"></script>
+        <script type="text/javascript" src="src/terrain_constants.js"></script>
+        <script type="text/javascript" src="src/pathfind.js"></script>
+        <script type="text/javascript" src="src/perlin_noise.js"></script> -->
+        <script type="text/javascript" src="js/avanor.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/underscore.min.js"></script>
+
+        <script type="text/javascript">
+            window.onload = function () {
+                canvas = document.getElementById('canvas');
+                layer1 = document.getElementById('layer1')
+                ccan = document.getElementById('ccan')
+                mapCanvas = document.getElementById('mapCanvas')
+                context = canvas.getContext('2d');
+                console.log = function() {};
+                // Make the canvas full screen
+                // canvas.width = window.innerWidth;
+                // canvas.height = window.innerHeight;
+                // 
+                canvas.width = 800;
+                canvas.height = 600;
+
+                mapCanvas.width = 800;
+                mapCanvas.height = 600;
+
+                ccan.width = 200;
+                ccan.height = 150;
+
+                // layer1.width = window.innerWidth;
+                // layer1.height = window.innerHeight;
+
+                // $('canvas').css({
+                //     'width': '800px',
+                //     'height': '600px'
+                // });
+                // context.webkitImageSmoothingEnabled = true;
+                // avanor.debugMode = true;
+
+                game = new avanor.Game(canvas, context);
+
+                game.createMap({
+                    rows: 40,
+                    cols: 40,
+                    tileWidth: 64,
+                    tileHeight: 48
+                });
+
+                game.loadAssets({
+                        chars: {
+                            'char': {
+                                'talking': 8,
+                                'running': 8,
+                                'walking': 8
+                            },
+                            'arno': {
+                                'talking': 8,
+                                'running': 8,
+                                'walking': 8
+                            },
+                            'horst': {
+                                'talking': 8,
+                                'running': 8,
+                                'walking': 8
+                            },
+                        },
+
+                        buildings: ['stone_hut'],
+
+                        // terrain: ['gr', 'gr_tileset']
+                });
+
+                var pc = avanor.Utils.mapCoordsToScreen(5, 5, game.tileWidth * game.camera.scale, game.tileHeight * game.camera.scale);
+
+                arno = new avanor.Character({
+                    x: pc.x + (game.tileWidth * game.camera.scale) / 2,
+                    y: pc.y + (game.tileHeight * game.camera.scale) / 2,
+                    width: 0,
+                    height: 0,
+                    camera: game.camera,
+                    assetManager: game.assetManager,
+                    game: game,
+                    sprite: 'horst',
+                    tileWidth: game.tileWidth,
+                    tileHeight: game.tileHeight,
+                    character_constants: avanor.character_constants['horst'],
+                    moveX: 8,
+                    moveY: 6
+                });
+
+                var building = new avanor.Building({
+                    mapPosX: 8,
+                    mapPosY: 10,
+                    occupies: [
+                        
+                    ],
+                    map: game.map,
+
+                    spriteSheet: 'stone_hut',
+                    sprite: 'stone_hut_sw',
+                    camera: game.camera,
+                    assetManager: game.assetManager,
+                    tileWidth: game.tileWidth,
+                    tileHeight: game.tileHeight
+                });
+                
+                game.add('house', building);
+                game.add('char', arno);
+
+                // var buildingPlaced = false;
+                
+                // game.on('tileHover', function(row, col) {
+                //     if(buildingPlaced) {
+                //         return;
+                //     }
+                //     building.mapPosX = row;
+                //     building.mapPosY = col;
+                //     building.renderOpacity = 0.7;
+                //     game.map.clearHighlights();
+                //     for(var i = row; i<row + 4; i++) {
+                //         for(var j = col; j<col + 4; j++) {
+                //             game.map.highlightTile({
+                //                 row: i,
+                //                 col: j,
+                //                 lighten: true,
+                //                 border: true,
+                //                 // borderColor: (j<5) ? '#4a4' : '#a44'
+                //             });
+                //         }
+                //     }
+
+                //     game.setMapRedraw(true);
+
+                // });
+                var walking = false;
+                game.on('tileClick', function(row, col, x, y) {
+                    // buildingPlaced = true;
+                    // building.mapPosX = row;
+                    // building.mapPosY = col;
+                    // building.renderOpacity = 1;
+                    // game.map.clearHighlights();
+                    // game.setMapRedraw(true);
+                    if(!walking) {
+                        walking = true;
+                        arno.walkTo(row, col, function() {
+                            console.log('s');
+                           walking = false;
+                        });
+                    }
+                        
+                });
+
+                game.run();
+
+            }
+        </script>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #layer1 {
+                position: absolute;
+                left: 0;
+                top: 0;
+                /*opacity: 0;*/
+                pointer-events: none;
+            }
+            #mapCanvas {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            #ccan {
+                position: absolute;
+                left: 600px;
+                top: 450px;
+            }
+
+            .loading {
+                display: none;
+                position: absolute;
+                text-align: center;
+                width: 400px;
+                height: 100px;
+            }
+
+            .loading-text {
+                font-family: Arial;
+                font-size: 24px;
+                color: #fff;
+                font-weight: bold;
+                margin: 20px;
+            }
+
+            .loading-bar {
+                width: 0px;
+                height: 20px;
+                background: #3498db;
+            }
+
+            .button {
+                display: inline-block;
+                padding: 5px 20px;
+            }
+
+            .plus {
+                background: #080;
+                color: #efefef;
+            }
+
+            .minus {
+                background: #800;
+                color: #efefef;
+            }
+
+        </style>
+    </head>
+    <body>
+        <canvas id="mapCanvas">
+                
+        </canvas>
+        <canvas id="canvas">
+            
+        </canvas>
+        <div>
+            <div class="button plus">
+                +
+            </div>
+            <div class="button minus">
+                -
+            </div>
+        </div>
+            
+        <canvas id="layer1">
+            
+        </canvas>
+        <canvas id="ccan">
+            
+        </canvas>
+    </body>
+</html>
