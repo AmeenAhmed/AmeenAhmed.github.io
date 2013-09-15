@@ -29,14 +29,15 @@
                 context = canvas.getContext('2d');
                 console.log = function() {};
                 // Make the canvas full screen
-                // canvas.width = window.innerWidth;
-                // canvas.height = window.innerHeight;
-                // 
-                canvas.width = 800;
-                canvas.height = 600;
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                // // 
+                // canvas.width = 800;
+                // canvas.height = 600;
 
-                mapCanvas.width = 800;
-                mapCanvas.height = 600;
+                mapCanvas.width = window.innerWidth;
+                mapCanvas.height = window.innerHeight;
+
 
                 ccan.width = 200;
                 ccan.height = 150;
@@ -84,7 +85,7 @@
                         // terrain: ['gr', 'gr_tileset']
                 });
 
-                var pc = avanor.Utils.mapCoordsToScreen(5, 5, game.tileWidth * game.camera.scale, game.tileHeight * game.camera.scale);
+                var pc = avanor.Utils.mapCoordsToScreen(20, 20, game.tileWidth * game.camera.scale, game.tileHeight * game.camera.scale);
 
                 arno = new avanor.Character({
                     x: pc.x + (game.tileWidth * game.camera.scale) / 2,
@@ -103,8 +104,8 @@
                 });
 
                 var building = new avanor.Building({
-                    mapPosX: 8,
-                    mapPosY: 10,
+                    mapPosX: 18,
+                    mapPosY: 16,
                     occupies: [
                         
                     ],
@@ -120,6 +121,9 @@
                 
                 game.add('house', building);
                 game.add('char', arno);
+
+                
+                game.camera.y -= 600;
 
                 // var buildingPlaced = false;
                 
@@ -174,6 +178,7 @@
                 padding: 0;
             }
 
+
             #layer1 {
                 position: absolute;
                 left: 0;
@@ -223,11 +228,19 @@
             .plus {
                 background: #080;
                 color: #efefef;
+                position: absolute;
+                left: 200px;
+                top: 0;
+                cursor: pointer;
             }
 
             .minus {
                 background: #800;
                 color: #efefef;
+                position: absolute;
+                left: 260px;
+                top: 0;
+                cursor: pointer;
             }
 
         </style>
