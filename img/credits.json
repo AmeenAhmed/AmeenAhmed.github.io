@@ -1,0 +1,14 @@
+[
+  {
+    "file": "screens/*.jpg",
+    "title": "Pourwell, Benchly and Vyber screenshots",
+    "source": "Clever Ape Studio's own App Store screenshots (apps/<app>/store/screenshots/raw/), cropped",
+    "license": "All rights reserved"
+  },
+  {
+    "file": "vyber-change.mp4",
+    "title": "Vyber screen recording",
+    "source": "Clever Ape Studio's own recording of Vyber (apps/vyber/store/launch-video/assets/recording.mp4, 38.6–49.6 s, cropped to the part that changes)",
+    "license": "All rights reserved"
+  }
+]

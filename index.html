@@ -1,137 +1,227 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<title>Ameen Ahmed</title>
-	<link rel="stylesheet" href="css/app.css" />
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clever Ape Studio: small iPhone apps that each do one job</title>
+  <meta name="description" content="Clever Ape Studio makes Pourwell, Benchly and Vyber: small iPhone apps that each do one job well. No account, no ads, no tracking.">
+  <link rel="canonical" href="https://ameenahmed.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ameenahmed.github.io/">
+  <meta property="og:title" content="Clever Ape Studio">
+  <meta property="og:description" content="Small iPhone apps that each do one job well: Pourwell, Benchly and Vyber.">
+  <meta property="og:image" content="https://ameenahmed.github.io/img/screens/hero-benchly.jpg">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#18191b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/StackSansHeadline-latin.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/StackSansText-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="studio.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-	<header>
-		<div class="name">
-			<a href="/">Ameen Ahmed</a>
-		</div>
-		<div class="toolbar">
-			<a href="/about">
-				<div class="h about">
-					<span class="tool">
-						&#xe031;
-					</span>
-					<span>
-						About
-					</span>
-				</div>
-			</a>
-			<a href="/blog">
-				<div class="h blog">
-					<span class="tool">
-						&#xe007;
-					</span>
-					<span>
-						Blog
-					</span>
-				</div>
-			</a>
+<header class="hero" id="top">
+  <div class="stage">
+    <nav class="nav" aria-label="Main">
+      <a class="wordmark" href="./">Clever Ape Studio</a>
+      <div class="nav-links">
+        <a class="nav-extra" href="#apps">Apps</a>
+        <a class="nav-extra" href="#prices">Prices</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-small" href="https://apps.apple.com/us/developer/ameen-ahmed/id6829226580">App Store</a>
+      </div>
+    </nav>
 
-			<div class="h works">
-				<span class="tool">
-					&#xe03d;
-				</span>
-				<span>
-					Works
-				</span>
-			</div>
+    <h1 class="split"><span class="half half-a">Apps that do</span> <span class="half half-b">one job well.</span></h1>
 
-			<div class="h lab">
-				<span class="tool">
-					&#xe058;
-				</span>
-				<span>
-					Lab
-				</span>
-			</div>
+    <div class="reel-window">
+      <ol class="reel" aria-label="The three apps">
+        <li class="reel-item is-current">
+          <figure>
+            <div class="frame"><img src="img/screens/hero-pourwell.jpg" width="880" height="660"
+              alt="Pourwell's batch screen in dark mode: 2,143 g of wax and 107 g of fragrance oil for ten candles, inside the usual range for beeswax"></div>
+            <figcaption>Pourwell, the candle calculator</figcaption>
+          </figure>
+        </li>
+        <li class="reel-item">
+          <figure>
+            <div class="frame"><img src="img/screens/hero-benchly.jpg" width="880" height="660"
+              alt="Benchly on the sideline: the game clock at 16:09 and a change due now, Noah Silva on for Ruby and Eli Novak on for Isla"></div>
+            <figcaption>Benchly, the soccer lineup planner</figcaption>
+          </figure>
+        </li>
+        <li class="reel-item">
+          <figure>
+            <div class="frame"><img src="img/screens/hero-vyber.jpg" width="880" height="660"
+              alt="Vyber's home screen: a grid of applets such as Reading Log, Habits, Water, Lifts, Mood and Budget"></div>
+            <figcaption>Vyber, which builds applets for you</figcaption>
+          </figure>
+        </li>
+      </ol>
+    </div>
 
-			<div class="h contact">
-				<span class="tool">
-					&#xe2cf;
-				</span>
-				<span>
-					Contact
-				</span>
-			</div>
-				
-		</div>
-		<div class="quote">
-			"Make something for yourself first, Think of selling it later!"
-		</div>
-		
-	</header>
-	<div class="content">
-		<div class="desc">
-			I am a web developer who works primarily on Node.js and Front end technologies. I have also worked with Java and C++. I love to play games. I spend my weekends dreaming about ( and working towards ) becoming an entrepreneur.
-		</div>
-	</div>
-	<footer class="m">
-		<div class="toolbar">
-			<div class="fb f">
-				<a href="https://www.facebook.com/ameen.viral.dragon">
-					<span class="tool-f">
-						&#xe096;
-					</span>
-				</a>
-			</div>
-			<div class="tw f">
-				<a href="https://twitter.com/TheViralDragon">
-					<span class="tool-f">
-						&#xe099;
-					</span>
-				</a>
-			</div>
-			
-			<div class="li f">
-				<a href="http://www.linkedin.com/profile/view?id=178823284&trk=nav_responsive_tab_profile">
-					<span class="tool-f">
-						&#xe0c0;
-					</span>
-				</a>
-			</div>
-			
-		</div>
-		<div class="toolbar">
-			
-			<div class="gm f">
-				<a href="mailto:ameen.ahmed.b@gmail.com">
-					<span class="tool-f">
-						&#xe024;
-					</span>
-				</a>
-			</div>
+    <p class="lede">Clever Ape Studio makes small iPhone apps for candle makers, youth soccer coaches and
+      anyone who keeps a log. No account, no ads, no tracking.</p>
+  </div>
+</header>
 
-			<div class="gh f">
-				<a href="https://github.com/AmeenAhmed">
-					<span class="tool-f">
-						&#xe0a4;
-					</span>
-				</a>
-			</div>
-			
-			<div class="sk f">
-				<a href="skype:ameen.ahmed.b">
-					<span class="tool-f">
-						&#xe0c6;
-					</span>
-				</a>
-			</div>
+<main>
+  <section class="features" id="apps" aria-labelledby="apps-title">
+    <h2 class="title" id="apps-title" data-rise>What they do</h2>
+    <div class="cells">
+      <article class="cell" data-rise>
+        <div class="cell-text">
+          <h3>Pourwell weighs out a batch</h3>
+          <p>Give it the container, the candle count and the fragrance load. It returns wax and oil to
+            the gram, and flags a load outside the range for your wax.</p>
+        </div>
+        <div class="cell-frag"><img src="img/screens/pourwell-batch.jpg" width="880" height="600" loading="lazy"
+          alt="Pourwell's batch: 79.74 oz of wax and 6.38 oz of fragrance oil for twelve candles, inside the usual 6 to 10% for soy wax"></div>
+      </article>
 
-			<div class="mp f">
-				<a href="http://maps.google.com?q=BTM,Bangalore">
-					<span class="tool-f">
-						&#xe025;
-					</span>
-				</a>
-			</div>
-		</div>
-	</footer>
+      <article class="cell cell-flip" data-rise>
+        <div class="cell-text">
+          <h3>Pourwell prices a candle</h3>
+          <p>Enter what the wax, oil, vessels and wicks cost you. It gives the cost of one candle, your
+            margin at your price, and a wholesale and retail price.</p>
+        </div>
+        <div class="cell-frag cell-frag-right"><img src="img/screens/pourwell-cost.jpg" width="880" height="620" loading="lazy"
+          alt="Pourwell's cost screen: $4.73 to make one candle, $19.27 kept at a $24 price, wholesale $9.46 and retail $18.92"></div>
+      </article>
+
+      <article class="cell cell-live" data-rise>
+        <div class="cell-text">
+          <h3>Benchly shares out the minutes</h3>
+          <p>Everyone gets a fair turn. Set the squad, the players on the field and the length of the
+            game: Benchly redoes this sum at every change.</p>
+        </div>
+        <div class="cell-frag">
+          <div class="fair" data-ui aria-label="Fair share of playing time">
+            <p class="fair-result" aria-live="polite"><span class="fair-big">32 min</span>
+              <span class="fair-line">each, of 50, for 11 players with 7 on the field.</span></p>
+            <div class="fair-controls" hidden>
+              <div class="stepper" data-key="players" data-min="4" data-max="22" data-step="1">
+                <span class="stepper-label" id="l-players">Players</span>
+                <button type="button" data-dir="-1" aria-label="One player fewer">−</button>
+                <output aria-labelledby="l-players">11</output>
+                <button type="button" data-dir="1" aria-label="One player more">+</button>
+              </div>
+              <div class="stepper" data-key="field" data-min="3" data-max="11" data-step="1">
+                <span class="stepper-label" id="l-field">On the field</span>
+                <button type="button" data-dir="-1" aria-label="One fewer on the field">−</button>
+                <output aria-labelledby="l-field">7</output>
+                <button type="button" data-dir="1" aria-label="One more on the field">+</button>
+              </div>
+              <div class="stepper" data-key="minutes" data-min="20" data-max="90" data-step="5">
+                <span class="stepper-label" id="l-minutes">Minutes</span>
+                <button type="button" data-dir="-1" aria-label="Five minutes shorter">−</button>
+                <output aria-labelledby="l-minutes">50</output>
+                <button type="button" data-dir="1" aria-label="Five minutes longer">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="cell cell-flip" data-rise>
+        <div class="cell-text">
+          <h3>Benchly runs the sideline</h3>
+          <p>A game clock says when the next change is due, who goes on and for whom. One tap makes the
+            change, and the minutes stay fair.</p>
+        </div>
+        <div class="cell-frag"><img src="img/screens/benchly-due.jpg" width="880" height="600" loading="lazy"
+          alt="Benchly's game clock at 16:09 of 25:00 with a change due now: Noah Silva on for Ruby, Eli Novak on for Isla, and a Make the change button"></div>
+      </article>
+
+      <article class="cell" data-rise>
+        <div class="cell-text">
+          <h3>Vyber changes what you point at</h3>
+          <p>Tap any part of an applet and write what should change. Here, “make this bigger” turns a
+            water tracker's small daily goal into a large number.</p>
+        </div>
+        <div class="cell-frag cell-frag-right">
+          <video src="img/vyber-change.mp4" poster="img/vyber-change-poster.jpg" width="876" height="660"
+            muted loop playsinline autoplay preload="metadata"
+            aria-label="In a water tracker, someone writes make this bigger on the daily goal, sends it, and Vyber rebuilds the goal as a large 8 glasses"></video>
+        </div>
+      </article>
+
+      <article class="cell cell-flip" data-rise>
+        <div class="cell-text">
+          <h3>Vyber builds the applet you describe</h3>
+          <p>Trackers, logs, timers and simple games, made from a sentence. This workout log was built in
+            Vyber, and what it records stays on the phone.</p>
+        </div>
+        <div class="cell-frag"><img src="img/screens/vyber-lifts.jpg" width="880" height="600" loading="lazy"
+          alt="A workout log built in Vyber: three workouts this week, seven weeks in a row, and the Push routine up next with a Start button"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="pricing" id="prices" aria-labelledby="prices-title">
+    <h2 class="title" id="prices-title" data-rise>What they cost</h2>
+    <div class="plans">
+      <div class="plan">
+        <button class="plan-name" type="button" id="n-pourwell" aria-expanded="false" aria-controls="s-pourwell" data-rise>Pourwell</button>
+        <div class="plan-stage" id="s-pourwell" role="region" aria-labelledby="n-pourwell">
+          <p class="plan-price"><span class="plan-figure">$7.99</span> <span class="plan-period">a year, or $19.99 once</span></p>
+          <p class="plan-text">The calculator and the batch log are free. Pro adds the cost and price of each
+            candle and keeps more than three batches. The yearly plan starts with a free week.</p>
+          <p class="plan-actions"><a class="btn" href="https://apps.apple.com/us/app/pourwell-candle-calculator/id6829226578">Get Pourwell</a>
+            <a href="/apps/pourwell/">Support</a> <a href="/apps/pourwell/privacy.html">Privacy</a></p>
+        </div>
+      </div>
+      <div class="plan is-open">
+        <button class="plan-name" type="button" id="n-benchly" aria-expanded="true" aria-controls="s-benchly" data-rise>Benchly</button>
+        <div class="plan-stage" id="s-benchly" role="region" aria-labelledby="n-benchly">
+          <p class="plan-price"><span class="plan-figure">$14.99</span> <span class="plan-period">a year, or $29.99 once</span></p>
+          <p class="plan-text">Planning a game, the sideline clock and fair minutes are free. Pro adds every
+            team you coach, playing time across the season and every past game. The yearly plan starts with
+            two free weeks.</p>
+          <p class="plan-actions"><a class="btn" href="https://apps.apple.com/us/app/benchly-soccer-lineup-builder/id6833275356">Get Benchly</a>
+            <a href="/apps/benchly/">Support</a> <a href="/apps/benchly/privacy.html">Privacy</a></p>
+        </div>
+      </div>
+      <div class="plan">
+        <button class="plan-name" type="button" id="n-vyber" aria-expanded="false" aria-controls="s-vyber" data-rise>Vyber</button>
+        <div class="plan-stage" id="s-vyber" role="region" aria-labelledby="n-vyber">
+          <p class="plan-price"><span class="plan-figure">$4.99</span> <span class="plan-period">a month, or $39.99 a year</span></p>
+          <p class="plan-text">Vyber starts with 10 free credits, and a new applet or a change costs one.
+            Plus gives 100 credits every month. Packs of 15, 50 and 120 credits never expire.</p>
+          <p class="plan-actions"><a class="btn" href="https://apps.apple.com/us/app/vyber-personal-apps-with-ai/id6836125267">Get Vyber</a>
+            <a href="/apps/vyber/">Support</a> <a href="/apps/vyber/privacy.html">Privacy</a></p>
+        </div>
+      </div>
+    </div>
+    <p class="note" data-rise>Every app is free to download, with no account and no ads. Prices are in US
+      dollars; the App Store shows yours.</p>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 class="prompt" id="contact-title" data-rise><span>Something broken, or an idea?</span>
+      <span>Write to the person who made the app.</span></h2>
+    <form class="ask" action="mailto:cleverapestudio@gmail.com" method="get" enctype="text/plain" data-rise>
+      <label class="sr-only" for="ask-body">Your message</label>
+      <input id="ask-body" name="body" type="text" autocomplete="off" placeholder="Benchly should let me…">
+      <button type="submit" aria-label="Write the email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+    <p class="ask-note" data-rise>Opens your mail app with this message. Every email is answered within two days.</p>
+    <dl class="facts" data-rise>
+      <div><dt>Email</dt><dd><a href="mailto:cleverapestudio@gmail.com">cleverapestudio@gmail.com</a></dd></div>
+      <div><dt>Support</dt><dd><a href="/apps/pourwell/">Pourwell</a>, <a href="/apps/benchly/">Benchly</a>, <a href="/apps/vyber/">Vyber</a></dd></div>
+      <div><dt>App Store</dt><dd><a href="https://apps.apple.com/us/developer/ameen-ahmed/id6829226580">All three apps</a></dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot-what">Clever Ape Studio, small iPhone apps</p>
+  <p class="foot-links"><a href="/apps/pourwell/">Pourwell</a> <a href="/apps/benchly/">Benchly</a> <a href="/apps/vyber/">Vyber</a>
+    <a href="mailto:cleverapestudio@gmail.com">Email</a></p>
+  <p class="foot-year">© 2026 Ameen Ahmed</p>
+</footer>
+<script src="studio.js" defer></script>
 </body>
 </html>
